@@ -32,26 +32,12 @@ mydata$MotorRB = ifelse(mydata$Motor > 2, 2, mydata$Motor)
 mydata$MotorCMB = ifelse(mydata$Motor < 3, 0, mydata$Motor - 3)
 mydata$OromotorRB = ifelse(mydata$Oromotor > 2, 2, mydata$Oromotor)
 mydata$OromotorCMB = ifelse(mydata$Oromotor < 3, 0, mydata$Oromotor - 2)
+mydata$CommunicationCMB = mydata$Communication -1
 mydata$ArousalMS = mydata$Arousal * (1/3)
-
-# Use this (instead of lines 22-30) if binary data per item in every subscale is provided.
-# mydata$AuditoryCMB = with(mydata, ifelse(Aud.4 %in% c(1), 2, ifelse(Aud.3 %in% c(1), 1, 0)))
-# mydata$AuditoryRB = with(mydata, ifelse(Aud.2 %in% c(1), 2, ifelse(Aud.1 %in% c(1), 1, 0)))
-# mydata$VisualCMB = with(mydata, ifelse(Vis.5 %in% c(1), 4, ifelse(Vis.4 %in% c(1), 3, 
-#                         ifelse(Vis.3 %in% c(1), 2, ifelse(Vis.2 %in% c(1), 1, 0)))))
-# mydata$VisualRB = with(mydata, ifelse(Vis.1 %in% c(1), 1, 0))
-# mydata$MotorCMB = with(mydata, ifelse(Mot.5 %in% c(1), 3, ifelse(Mot.4 %in% c(1), 2, 
-#                        ifelse(Mot.3 %in% c(1), 1, 0))))
-# mydata$MotorRB = with(mydata, ifelse(Mot.2 %in% c(1), 2, ifelse(Mot.1 %in% c(1), 1, 0)))
-# mydata$OromotorCMB = ifelse(Orom.3 %in% c(1), 1, 0)
-# mydata$OromotorRB = with(mydata, ifelse(Orom.2 %in% c(1), 2, ifelse(Orom.1 %in% c(1), 1, 0)))
-# mydata$ArousalMS = with(mydata, ifelse(Arou.3 %in% c(1), 1, ifelse(Arou.2 %in% c(1), 2/3, 
-#                         ifelse(Arou.1 %in% c(1), 1/3, 0))))
-
 
 #Obtain the reflexive behavior and cognitively mediated behavior value by addition of 
 mydata$RB = with(mydata, AuditoryRB + VisualRB + MotorRB + OromotorRB)/7
-mydata$CMB = with(mydata, AuditoryCMB + VisualCMB + MotorCMB + OromotorCMB)/11
+mydata$CMB = with(mydata, AuditoryCMB + VisualCMB + MotorCMB + OromotorCMB + CommunicationCMB)/11
 
 mydata$index_rb = 0
 mydata$index_cmb = 0
