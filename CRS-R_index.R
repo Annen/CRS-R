@@ -29,10 +29,10 @@ mydata$AuditoryCMB = ifelse(mydata$Auditory < 3, 0, mydata$Auditory - 2)
 mydata$VisualRB = ifelse(mydata$Visual > 1, 1, mydata$Visual)
 mydata$VisualCMB = ifelse(mydata$Visual < 2, 0, mydata$Visual - 1)
 mydata$MotorRB = ifelse(mydata$Motor > 2, 2, mydata$Motor)
-mydata$MotorCMB = ifelse(mydata$Motor < 3, 0, mydata$Motor - 3)
+mydata$MotorCMB = ifelse(mydata$Motor < 3, 0, mydata$Motor - 2)
 mydata$OromotorRB = ifelse(mydata$Oromotor > 2, 2, mydata$Oromotor)
 mydata$OromotorCMB = ifelse(mydata$Oromotor < 3, 0, mydata$Oromotor - 2)
-mydata$CommunicationCMB = mydata$Communication -1
+mydata$CommunicationCMB = mydata$Communication
 mydata$ArousalMS = mydata$Arousal * (1/3)
 
 #Obtain the reflexive behavior and cognitively mediated behavior value by addition of 
