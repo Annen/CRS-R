@@ -49,3 +49,5 @@ Jitka Annen, Glenn van der Lande
 
 ### Known Issues
 The CRS-R folder from your gitclone contains a "-" which may cause problems when importing the module.
+Current workaround is to locally rename the folder to CRS_R after cloning the repository. Note that this will
+preclude you from pulling updates from the repository or contributing. 
