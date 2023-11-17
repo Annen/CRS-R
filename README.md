@@ -45,3 +45,7 @@ Measure for Disorders of Consciousness. Frontiers in neurology, 9, 1115.
 
 ### Code Authors
 Jitka Annen, Glenn van der Lande
+
+
+### Known Issues
+The CRS-R folder from your gitclone contains a "-" which may cause problems when importing the module.
